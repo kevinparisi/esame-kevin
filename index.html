@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home - Sito personale</title>
+  
+  <!-- Font Google Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome per le icone decorative -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+  <!-- Overlay per la transizione fluida tra le pagine -->
+  <div class="page-transition-overlay"></div>
+
+  <!-- MENU PRINCIPALE -->
+  <header>
+    <nav>
+      <a href="index.html" class="active"><i class="fa-solid fa-house"></i> Home</a>
+      <a href="cv.html"><i class="fa-solid fa-file-lines"></i> CV</a>
+      <a href="stage.html"><i class="fa-solid fa-briefcase"></i> Stage</a>
+      <a href="lavori.html"><i class="fa-solid fa-laptop-code"></i> Lavori</a>
+      <a href="extra.html"><i class="fa-solid fa-star"></i> Extra</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Messaggio mostrato solo se il caricamento fallisce -->
+    <p id="messaggio-errore" hidden></p>
+
+    <!-- Sezione Presentazione -->
+    <section id="presentazione" class="sezione-card">
+      <div class="foto-container">
+        <!-- Assicurati che nella cartella "img" ci sia il file chiamato "profilo.jpg" -->
+        <img id="foto" src="img/foto per cv.jpg" alt="Foto personale" class="foto-profilo" title="Clicca per cambiare foto">
+        <input type="file" id="scegli-foto" accept="image/*" hidden>
+      </div>
+      <div class="testo-presentazione">
+        <h1 id="nome">Kevin</h1>
+        <h2 id="qualifica">Operatore Informatico</h2>
+        
+        <!-- Intestazione Chi Sono con freccia -->
+        <div id="toggle-chi-sono" class="chi-sono-header">
+          <span>Chi sono</span>
+          <i id="icona-freccia" class="fa-solid fa-chevron-down"></i>
+        </div>
+
+        <!-- Contenitore a tendina -->
+        <div id="contenuto-chi-sono" class="chi-sono-contenuto">
+          <p id="testo-chi-sono">
+            Sono Kevin, vivo a Monza e studio informatica presso l'istituto Immaginazione e Lavoro di Milano, dove sono arrivato al terzo anno. In questi anni ho acquisito esperienza nella programmazione con linguaggi come HTML, CSS, JavaScript, C++ e Python.<br><br>
+            Ho avuto l'opportunità di svolgere uno stage di 3 mesi presso un'azienda specializzata in assistenza e riparazione di qualsiasi tipo di dispositivo tecnologico (smartphone, PC, tablet). Durante questo percorso ho appreso la riparazione di smartphone e sviluppato competenze nell'ambito hardware che prima non possedevo.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sezione Passioni -->
+    <section class="sezione-card">
+      <h2 class="titolo-sezione"><i class="fa-solid fa-heart"></i> Passioni</h2>
+      <div id="lista-passioni"></div>
+    </section>
+
+    <!-- Sezione Competenze -->
+    <section class="sezione-card">
+      <h2 class="titolo-sezione"><i class="fa-solid fa-gears"></i> Cosa so fare</h2>
+      <div id="lista-competenze"></div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-info">
+      <p><i class="fa-solid fa-location-dot"></i> <span>Via San Rocco 29 Monza (MB)</span></p>
+      <p><i class="fa-solid fa-envelope"></i> <a href="mailto:parisi.kevin@edu.immaginazioneelavoro.it">parisi.kevin@edu.immaginazioneelavoro.it</a></p>
+      <p><i class="fa-solid fa-phone"></i> <span>3520268090</span></p>
+    </div>
+  </footer>
+
+  <script src="home.js"></script>
+  <script>
+    // Permette di cliccare sul riquadro foto per caricare un'immagine dal PC
+    const imgProfilo = document.getElementById("foto");
+    const inputFoto = document.getElementById("scegli-foto");
+
+    imgProfilo.style.cursor = "pointer";
+    imgProfilo.addEventListener("click", () => inputFoto.click());
+
+    inputFoto.addEventListener("change", (e) => {
+      const file = e.target.files[0];
+      if (file) {
+        imgProfilo.src = URL.createObjectURL(file);
+      }
+    });
+  </script>
+</body>
+</html>

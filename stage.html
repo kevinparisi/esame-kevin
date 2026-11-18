@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stage - Sito personale</title>
+  
+  <!-- Font Google Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome per le icone decorative -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="stage.css">
+</head>
+<body class="page-loaded">
+
+  <!-- MENU PRINCIPALE -->
+  <header>
+    <nav>
+      <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+      <a href="cv.html"><i class="fa-solid fa-file-lines"></i> CV</a>
+      <a href="stage.html" class="active"><i class="fa-solid fa-briefcase"></i> Stage</a>
+      <a href="lavori.html"><i class="fa-solid fa-laptop-code"></i> Lavori</a>
+      <a href="extra.html"><i class="fa-solid fa-star"></i> Extra</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Messaggio mostrato solo se il caricamento fallisce -->
+    <p id="messaggio-errore" hidden></p>
+
+    <div class="titolo-pagina">
+      <h1><i class="fa-solid fa-briefcase"></i> Esperienza di Stage</h1>
+    </div>
+
+    <!-- Riquadro in alto per il Logo Azienda -->
+    <section class="sezione-card box-logo-azienda">
+      <div class="logo-wrapper">
+        <!-- Metti il file del logo nella cartella "img" chiamandolo "logo_azienda.png" -->
+        <img id="logo-azienda" src="img/azienda1.jpg" alt="Logo Azienda" class="img-logo-alto" title="Clicca per scegliere il logo">
+        <input type="file" id="scegli-logo" accept="image/*" hidden>
+      </div>
+      <div class="info-azienda-alto">
+        <h2>Azienda Ospitante</h2>
+        <p>Assistenza e riparazione dispositivi tecnologici (Smartphone, PC, Tablet)</p>
+      </div>
+    </section>
+
+    <!-- Contenitore riempito dinamicamente da stage.js -->
+    <div id="lista-stage"></div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-info">
+      <p><i class="fa-solid fa-location-dot"></i> <span>Via San Rocco 29 Monza (MB)</span></p>
+      <p><i class="fa-solid fa-envelope"></i> <a href="mailto:parisi.kevin@edu.immaginazioneelavoro.it">parisi.kevin@edu.immaginazioneelavoro.it</a></p>
+      <p><i class="fa-solid fa-phone"></i> <span>3520268090</span></p>
+    </div>
+  </footer>
+
+  <script src="stage.js"></script>
+  <script>
+    // Permette di cliccare sul riquadro del logo per selezionarlo dal PC
+    const imgLogo = document.getElementById("logo-azienda");
+    const inputLogo = document.getElementById("scegli-logo");
+
+    imgLogo.style.cursor = "pointer";
+    imgLogo.addEventListener("click", () => inputLogo.click());
+
+    inputLogo.addEventListener("change", (e) => {
+      const file = e.target.files[0];
+      if (file) {
+        imgLogo.src = URL.createObjectURL(file);
+      }
+    });
+  </script>
+</body>
+</html>

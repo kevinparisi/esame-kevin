@@ -1,0 +1,175 @@
+/* ==========================================================================
+   1. STILI GENERALI E VARIABILI
+   ========================================================================== */
+:root {
+  --primary-color: #3a7bd5;
+  --secondary-color: #00d2ff;
+  --accent-color: #00d2ff;
+  --bg-gradient: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+  --card-bg: rgba(15, 32, 39, 0.65);
+  --text-color: #ffffff;
+  --text-muted: #e0e6ed;
+  --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.25);
+  --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background: var(--bg-gradient);
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ==========================================================================
+   2. HEADER E MENU DI NAVIGAZIONE
+   ========================================================================== */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(15, 32, 39, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 14px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+nav a {
+  color: #e0e0e0;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 8px 18px;
+  border-radius: 20px;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+nav a:hover, nav a.active {
+  color: #ffffff;
+  background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+  box-shadow: 0 4px 15px rgba(0, 210, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   3. CONTENUTO CV
+   ========================================================================== */
+main {
+  max-width: 950px;
+  width: 100%;
+  margin: 30px auto;
+  padding: 0 20px;
+  flex: 1;
+}
+
+.titolo-pagina h1 {
+  color: var(--accent-color);
+  font-size: 1.8rem;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sezione-card {
+  background: var(--card-bg);
+  border-radius: 16px;
+  padding: 28px;
+  margin-bottom: 30px;
+  box-shadow: var(--shadow-lg);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.titolo-sezione {
+  color: var(--accent-color);
+  font-size: 1.4rem;
+  margin-bottom: 18px;
+  border-bottom: 2px solid rgba(0, 210, 255, 0.3);
+  padding-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cv-dato {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: var(--text-muted);
+}
+
+.cv-dato strong {
+  color: #ffffff;
+}
+
+.cv-item {
+  background: rgba(255, 255, 255, 0.05);
+  border-left: 4px solid var(--accent-color);
+  padding: 16px 20px;
+  border-radius: 10px;
+  margin-bottom: 16px;
+}
+
+.cv-item h3 {
+  color: #ffffff;
+  font-size: 1.15rem;
+  margin-bottom: 4px;
+}
+
+.cv-item .sottotitolo {
+  color: var(--accent-color);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.cv-item .periodo {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+}
+
+/* ==========================================================================
+   4. FOOTER
+   ========================================================================== */
+footer {
+  background: rgba(15, 32, 39, 0.95);
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+  margin-top: auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-info {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.footer-info a {
+  color: var(--accent-color);
+  text-decoration: none;
+}

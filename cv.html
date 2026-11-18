@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CV - Sito personale</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="cv.css">
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+      <a href="cv.html" class="active"><i class="fa-solid fa-file-lines"></i> CV</a>
+      <a href="stage.html"><i class="fa-solid fa-briefcase"></i> Stage</a>
+      <a href="lavori.html"><i class="fa-solid fa-laptop-code"></i> Lavori</a>
+      <a href="extra.html"><i class="fa-solid fa-star"></i> Extra</a>
+    </nav>
+  </header>
+
+  <main>
+    <p id="messaggio-errore" hidden></p>
+
+    <div class="titolo-pagina">
+      <h1><i class="fa-solid fa-id-card"></i> Curriculum Vitae</h1>
+    </div>
+
+    <section class="sezione-card">
+      <h2 class="titolo-sezione"><i class="fa-solid fa-user"></i> Informazioni personali</h2>
+      <div id="lista-dati" class="contenuto-cv"></div>
+    </section>
+
+    <section class="sezione-card">
+      <h2 class="titolo-sezione"><i class="fa-solid fa-graduation-cap"></i> Istruzione</h2>
+      <div id="lista-istruzione" class="contenuto-cv"></div>
+    </section>
+
+    <section class="sezione-card">
+      <h2 class="titolo-sezione"><i class="fa-solid fa-briefcase"></i> Esperienze di lavoro</h2>
+      <div id="lista-esperienza" class="contenuto-cv"></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-info">
+      <p><i class="fa-solid fa-location-dot"></i> <span>Via San Rocco 29 (MB)</span></p>
+      <p><i class="fa-solid fa-envelope"></i> <a href="mailto:parisi.kevin@edu.immaginazioneelavoro.it">parisi.kevin@edu.immaginazioneelavoro.it</a></p>
+      <p><i class="fa-solid fa-phone"></i> <span>3520268090</span></p>
+    </div>
+  </footer>
+
+  <script src="cv.js"></script>
+</body>
+</html>

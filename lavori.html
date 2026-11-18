@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lavori - Sito personale</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="lavori.css">
+</head>
+<body class="page-loaded">
+
+  <header>
+    <nav>
+      <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+      <a href="cv.html"><i class="fa-solid fa-file-lines"></i> CV</a>
+      <a href="stage.html"><i class="fa-solid fa-briefcase"></i> Stage</a>
+      <a href="lavori.html" class="active"><i class="fa-solid fa-laptop-code"></i> Lavori</a>
+      <a href="extra.html"><i class="fa-solid fa-star"></i> Extra</a>
+    </nav>
+  </header>
+
+  <main>
+    <p id="messaggio-errore" hidden></p>
+
+    <section class="sezione-card">
+      <h1 class="titolo-sezione"><i class="fa-solid fa-laptop-code"></i> I miei Lavori e Progetti</h1>
+      <p>Raccolta dei principali progetti realizzati durante il percorso scolastico e personale.</p>
+    </section>
+
+    <section class="sezione-card">
+      <div id="lista-lavori" class="griglia-lavori">
+        <article class="card-lavoro">
+          <div class="lavoro-info">
+            <h3>Sito Web Personale / Portfolio</h3>
+            <span class="badge-tech">HTML5</span> <span class="badge-tech">CSS3</span> <span class="badge-tech">JavaScript</span>
+            <p>Sviluppo di un sito web responsive collegato dinamicamente a Google Sheets tramite CSV per la gestione di CV, stage e competenze.</p>
+          </div>
+        </article>
+
+        <article class="card-lavoro">
+          <div class="lavoro-info">
+            <h3>Programmazione in C++ e Python</h3>
+            <span class="badge-tech">C++</span> <span class="badge-tech">Python</span>
+            <p>Realizzazione di algoritmi, gestionali da console e script di automazione sviluppati durante il triennio informatico.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-info">
+      <p><i class="fa-solid fa-location-dot"></i> <span>Via San Rocco 29 Monza (MB)</span></p>
+      <p><i class="fa-solid fa-envelope"></i> <a href="mailto:parisi.kevin@edu.immaginazioneelavoro.it">parisi.kevin@edu.immaginazioneelavoro.it</a></p>
+      <p><i class="fa-solid fa-phone"></i> <span>3520268090</span></p>
+    </div>
+  </footer>
+
+</body>
+</html>

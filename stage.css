@@ -1,0 +1,77 @@
+/* ==========================================
+   STILI SPECIFICI PER LA PAGINA STAGE
+   ========================================== */
+.blocco-stage {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card-stage-info {
+  display: flex;
+  gap: 25px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.img-stage {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 12px;
+  border-radius: 12px;
+  border: 2px solid var(--accent-color);
+}
+
+.dettagli-stage {
+  flex: 1;
+  min-width: 260px;
+}
+
+.dettagli-stage h2 {
+  color: #ffffff;
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+}
+
+.info-meta {
+  color: var(--accent-color);
+  font-weight: 500;
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+}
+
+.dettagli-stage h3 {
+  color: #ffffff;
+  font-size: 1.1rem;
+  margin-top: 14px;
+  margin-bottom: 8px;
+}
+
+.dettagli-stage ul {
+  padding-left: 20px;
+  color: #e0e0e0;
+}
+
+.dettagli-stage li {
+  margin-bottom: 5px;
+}
+
+.box-relazione {
+  background: rgba(255, 255, 255, 0.05);
+  border-left: 4px solid var(--accent-color);
+  padding: 18px 20px;
+  border-radius: 10px;
+}
+
+.box-relazione h3 {
+  color: var(--accent-color);
+  font-size: 1.15rem;
+  margin-bottom: 8px;
+}
+
+.testo-relazione {
+  color: #e0e0e0;
+  line-height: 1.7;
+}
